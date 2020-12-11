@@ -16,20 +16,21 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class SwaggerConfig {
 
-    @Value("${spring.application.info.basepackage}")
-    private String BASE_PACKAGE;
-    @Value("${spring.application.info.title}")
+    private static final String BASE_PACKAGE = "com.bianeck.bookstoremanager";
+
+    @Value("${info.app.title}")
     private String TITLE;
-    @Value("${spring.application.info.description}")
+    @Value("${info.app.description}")
     private String DESCRIPTION;
-    @Value("${spring.application.info.version}")
+    @Value("${info.app.version}")
     private String VERSION;
-    @Value("${spring.application.info.contact.name}")
+    @Value("${info.app.contact.name}")
     private String CONTACT_NAME;
-    @Value("${spring.application.info.contact.url}")
+    @Value("${info.app.contact.url}")
     private String CONTACT_URL;
-    @Value("${spring.application.info.contact.email}")
+    @Value("${info.app.contact.email}")
     private String CONTACT_EMAIL;
+
 
     @Bean
     public Docket api() {
@@ -38,6 +39,8 @@ public class SwaggerConfig {
                 .apis(RequestHandlerSelectors.basePackage(BASE_PACKAGE))
                 .paths(PathSelectors.any())
                 .build().apiInfo(buildApiInfo());
+
+
     }
 
     private ApiInfo buildApiInfo() {
