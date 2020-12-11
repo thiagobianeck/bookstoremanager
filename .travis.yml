@@ -1,6 +1,6 @@
 dist: focal
 language: java
-jdk: openjdk15
+jdk: openjdk14
 install: true
 cache:
   directories:
