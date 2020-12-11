@@ -1,6 +1,5 @@
-dist: xenial
+dist: focal
 language: java
-sudo: false
 jdk: openjdk15
 install: true
 cache:
