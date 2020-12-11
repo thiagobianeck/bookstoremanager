@@ -26,7 +26,7 @@
 	<description>BookStore Manager API Professional</description>
 
 	<properties>
-		<java.version>15</java.version>
+		<java.version>14</java.version>
 	</properties>
 
 	<dependencies>

@@ -1,6 +1,10 @@
+dist: xenial
 language: java
-jdk:
-  - oraclejdk8
-dist: trusty
+sudo: false
+jdk: openjdk14
+install: true
+cache:
+  directories:
+    - $HOME/.m2
 before_install:
   - chmod +x mvnw
