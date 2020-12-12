@@ -1,15 +1,18 @@
 package com.bianeck.bookstoremanager.books.entity;
 
 import com.bianeck.bookstoremanager.author.entity.Author;
+import com.bianeck.bookstoremanager.entity.Auditable;
 import com.bianeck.bookstoremanager.publishers.entity.Publisher;
 import com.bianeck.bookstoremanager.users.entity.User;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
 
+@EqualsAndHashCode(callSuper = true)
 @Data
 @Entity
-public class Book {
+public class Book extends Auditable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
