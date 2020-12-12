@@ -7,6 +7,9 @@ addons:
   sonarcloud:
     organization: $SONAR_ORGANIZATION
     token: $SONAR_TOKEN
+branches:
+  only:
+    - master
 script:
   - mvn clean package sonar:sonar -P sonar
 cache:
